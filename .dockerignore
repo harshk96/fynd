@@ -1,0 +1,9 @@
+**/node_modules
+**/.vite
+**/__pycache__
+**/*.pyc
+**/.DS_Store
+**/.env
+**/.env.*
+backend/submissions.json
+backend/users.json

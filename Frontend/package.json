@@ -1,0 +1,13 @@
+{
+  "name": "fynd-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "devDependencies": {},
+  "scripts": {
+    "install:all": "npm --prefix user install && npm --prefix admin install",
+    "dev": "npm --prefix user run dev",
+    "dev:user": "npm --prefix user run dev",
+    "dev:admin": "npm --prefix admin run dev"
+  }
+}

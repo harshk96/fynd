@@ -1,0 +1,31 @@
+services:
+  backend:
+    build:
+      context: ./Backend
+    env_file:
+      - ./.env
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./Backend/submissions.json:/app/submissions.json
+      - ./Backend/users.json:/app/users.json
+
+  user:
+    build:
+      context: ./Frontend/user
+    depends_on:
+      - backend
+    ports:
+      - "3001:80"
+
+  admin:
+    build:
+      context: ./Frontend/admin
+    depends_on:
+      - backend
+    ports:
+      - "3002:80"
+
+networks:
+  default:
+    name: fynd-assignment-net

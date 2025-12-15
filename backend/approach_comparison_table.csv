@@ -1,0 +1,4 @@
+Approach,Accuracy (%),JSON Validity (%),Valid Predictions,Total Reviews
+Approach 1: Direct,66.0,100.0,200,200
+Approach 2: Chain-of-Thought,64.0,100.0,200,200
+Approach 3: Template-Based,70.5,100.0,200,200
