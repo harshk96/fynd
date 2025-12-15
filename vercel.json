@@ -1,0 +1,31 @@
+{
+  "github": {
+    "silent": true
+  },
+  "builds": [
+    {
+      "src": "Frontend/user/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    },
+    {
+      "src": "Frontend/admin/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/user/(.*)",
+      "dest": "Frontend/user/$1"
+    },
+    {
+      "src": "/admin/(.*)",
+      "dest": "Frontend/admin/$1"
+    }
+  ]
+}

@@ -8,6 +8,9 @@
     "install:all": "npm --prefix user install && npm --prefix admin install",
     "dev": "npm --prefix user run dev",
     "dev:user": "npm --prefix user run dev",
-    "dev:admin": "npm --prefix admin run dev"
+    "dev:admin": "npm --prefix admin run dev",
+    "build:user": "npm --prefix user run build",
+    "build:admin": "npm --prefix admin run build",
+    "build:all": "npm run build:user && npm run build:admin"
   }
 }
